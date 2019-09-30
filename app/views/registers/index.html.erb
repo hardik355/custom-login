@@ -1,0 +1,33 @@
+<h1>Register</h1>
+
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>E-mail</th>
+    <th>City</th>
+    <th>Area Code</th>
+    <th>Password</th>
+  </tr>
+
+  <% @registers.each do |register|%>
+    <tr>
+      <td><%= register.first_name %></td>
+      <td><%= register.last_name %></td>
+      <td><%= register.email %></td>
+      <td><%= register.city %></td>
+      <td><%= register.pincode %></td>
+      <td><%= register.password %></td>
+
+      <td><%= link_to 'edit', edit_register_path(register)%></td>
+      <td><%= link_to 'show', register_path(register)%></td>
+      <td><%= link_to 'destroy',  register_path(register),
+                                  method: :delete, 
+                                  data: { confirm: 'Are you sure?' } %></td>
+                                 
+    </tr>
+  <%end%>
+</table>
+
+<%= link_to 'New Registration', new_register_path %>

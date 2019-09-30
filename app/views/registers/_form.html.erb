@@ -1,0 +1,23 @@
+<%= form_with(model: @register, local: true)do |form|%>
+
+  <%= form.label :First_Name %>
+  <%= form.text_field :first_name %><br><br>
+
+  <%= form.label :Last_Name %>
+  <%= form.text_field :last_name %><br><br>
+
+  <%= form.label :Email %>
+  <%= form.text_field :email %><br><br>
+
+  <%= form.label :City %>
+  <%= form.text_field :city %><br><br>
+
+  <%= form.label :pincode %>
+  <%= form.text_field :pincode %><br><br>
+
+  <%= form.label :Password %>
+  <%= form.password_field :password %><br><br>
+
+  <%= form.submit %>
+
+<%end%>
